@@ -23,7 +23,7 @@ public class DbConfiguration
     public static final String DRIVER_CLASS_NAME = "driverClassName";
     public static final String URL = "url";
     public static final String USERNAME = "username";
-    public static final String PASSWORD = "pass";
+    public static final String PASSWORD = "password";
     
     @Bean
     public DataSource dataSource()
