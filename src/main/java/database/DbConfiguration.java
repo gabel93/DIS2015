@@ -88,6 +88,6 @@ public class DbConfiguration
     @Bean
     public SessionTool sessionTool()
     {
-        return new SessionTool(this.sessionFactory()); .
+        return new SessionTool(this.sessionFactory());
     }
 }
