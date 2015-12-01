@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  
 @Configuration
 @EnableTransactionManagement
-public class DbConfiguration
+public class DbConfiguratio
 {
     public static final String DB_PROPERTIES_PATH = "/db.properties";
     public static final String DRIVER_CLASS_NAME = "driverClassName";
