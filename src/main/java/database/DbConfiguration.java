@@ -44,7 +44,7 @@ public class DbConfiguration
         {
             throw new RuntimeException(e);
         }
-        
+        //tjek ordenligt op på metode for properties
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName(properties.getProperty(DRIVER_CLASS_NAME));
         dataSource.setUrl(properties.getProperty(URL));
