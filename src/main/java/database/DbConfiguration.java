@@ -30,7 +30,7 @@ public class DbConfiguration
      * egenskaberne ved at bruge getter og setter metoder. 
      */
     @Bean
-    public static void main string
+   
     public DataSource dataSource()
     {
     	//input stream defineres til DB_PROPERTIES_PATH der ovenover er defineret som XML dokumentet
