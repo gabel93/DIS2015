@@ -25,8 +25,12 @@ public class DbConfiguration
     public static final String URL = "url";
     public static final String USERNAME = "username";
     public static final String PASSWORD = "password";
-    
+    /* "Javabeans" er klasser der indkapsler flere objekter ind i et enestående objekt (bean)
+     * De er alle serilizable og har alle zero-argument constructer og tillader adgang til 
+     * egenskaberne ved at bruge getter og setter metoder. 
+     */
     @Bean
+    
     public DataSource dataSource()
     {
         InputStream inputStream = DbConfiguration.class.getResourceAsStream(DB_PROPERTIES_PATH);
