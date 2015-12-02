@@ -33,6 +33,8 @@ public class DbConfiguration
     
     public DataSource dataSource()
     {
+    	//input stream defineres til DB_PROPERTIES_PATH der ovenover er defineret som XML dokumentet
+    	//db.proporties.xml 
         InputStream inputStream = DbConfiguration.class.getResourceAsStream(DB_PROPERTIES_PATH);
         Properties properties = new Properties();
         try
