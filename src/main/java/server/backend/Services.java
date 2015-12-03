@@ -103,7 +103,7 @@ public class Services
      * @param user
      * @return
      */
-  //giver besked til db om at gemme use
+     // Her giver 'sessiontool' besked til db om at gemme user
     public User add(User user)
     {
         sessionTool.save(user);
