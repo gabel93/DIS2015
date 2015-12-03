@@ -85,7 +85,7 @@ public class Services
     
     public boolean logout(long id)
     {
-    	//den nuvÃ¦rende user indikeret af "this", bliver logget ud
+    	//den nuværende user som bliver defineret/indikeret af "this", bliver logget ud
         User user = this.getUser(id);
         if(user == null)
         {
