@@ -16,6 +16,6 @@ public class ServiceConfiguration
     public Services services()
     {
         return new Services(dbConfiguration.sessionTool());
-        er
+        
     }
 }
