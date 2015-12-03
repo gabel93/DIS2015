@@ -18,5 +18,3 @@ public class ServiceConfiguration
         return new Services(dbConfiguration.sessionTool());
     }
 }
-
-
