@@ -36,7 +36,7 @@ public class Services
             throw new RuntimeException(e);
         }
         
-        // Create the admin if not exist.
+        // Opretter Admin hvis den ikke eksistere.
         User admin = INSTANCE.getUserByUsername(ADMIN_USERNAME);
         if(admin == null)
         {
