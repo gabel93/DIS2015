@@ -109,7 +109,7 @@ public class Services
         sessionTool.save(user);
         return user;
     }
-    //henter user fra DB
+    //Her hentes user fra databasen
     public User getUser(long id)
     {
         return sessionTool.get(User.class, id);
