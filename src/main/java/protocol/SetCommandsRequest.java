@@ -2,7 +2,7 @@ package protocol;
 
 import java.io.Serializable;
 
-public class SetCommandsRequest 
+public class SetCommandsRequest implements Serializable
 {
 
 }
