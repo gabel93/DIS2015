@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class LoginRequest implements Serializable
 {
+	//Har til formål at sørge for login funktionen, hvis man vil ind i menuen.
     private String username;
     private String password;
 
