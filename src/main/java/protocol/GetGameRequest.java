@@ -1,5 +1,18 @@
 package protocol;
 
-public class GetGameRequest {
+import java.io.Serializable;
 
+public class GetGameRequest implements Serializable
+{
+    private String name;
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 }
