@@ -7,6 +7,7 @@ import database.Game;
 public class CreateGameRequest 
 implements Serializable
 {
+	//Har til formål at oprette spil i terminalen som f.eks. et snake spil
     private Game game;
 
     public Game getGame()
