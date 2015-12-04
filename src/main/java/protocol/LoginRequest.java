@@ -24,6 +24,6 @@ public class LoginRequest implements Serializable
 
     public void setPassword(String password)
     {
-        this.password = gabel93
+        this.password = password;
     }
 }
