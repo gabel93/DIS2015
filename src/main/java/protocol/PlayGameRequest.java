@@ -2,6 +2,7 @@ package protocol;
 
 import java.io.Serializable;
 
-public class PlayGameRequest {
+public class PlayGameRequest implements Serializable 
+{
 
 }
