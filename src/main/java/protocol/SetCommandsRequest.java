@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 public class SetCommandsRequest implements Serializable
 {
+	//En lidt større klasse da der her bliver defineret kommandoer til spil.
+	//Først findes der et username, så det spil man vil spille og til sidst de kommandoer
+	//Du har lyst til at sætte i forbindelse med dit spil.
 	private String username;
     private String gameName;
     private String commands;
