@@ -6,7 +6,8 @@ import server.backend.Services;
 import database.Game;
 import database.User;
 
-//Denne
+//Denne klasse har til formål at skabe et text user interface. her skal der være mulighed
+//for at opfylde de krav som er kravspec.
 public class Tui {
 
 	public static void main(String[] strings)
