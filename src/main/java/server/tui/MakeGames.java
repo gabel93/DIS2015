@@ -16,5 +16,14 @@ public class MakeGames {
             game.setName(name);
             Services.INSTANCE.add(game);
         }
+        List<Game> games = Services.INSTANCE.getGames();
+        System.out.println("Current games: ");
+        for(Game game : games)
+        {
+            System.out.println(game.getName());
+        }
+    }
+}
+
 }
  
