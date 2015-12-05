@@ -9,7 +9,7 @@ public class MakeGames {
 
 	public static void main(String[] strings)
     {
-        String[] names = {"", "", ""};
+        String[] names = {"indsæt", "nogle", "navne"};
         for(String name : names)
         {
             Game game = new Game();
