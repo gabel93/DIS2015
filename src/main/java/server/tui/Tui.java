@@ -7,7 +7,8 @@ import database.Game;
 import database.User;
 
 //Denne klasse har til formål at skabe et text user interface. her skal der være mulighed
-//for at opfylde de krav som er kravspec.
+//for at opfylde de krav som er kravspec. derfor bliver både database game og user + backend
+//importeret til klassen.
 public class Tui {
 
 	public static void main(String[] strings)
