@@ -5,6 +5,8 @@ import java.util.List;
 import server.backend.Services;
 import database.Game;
 
+//Denne klasse har til formål at lave spil. med nyt navn, man kan ikke kører med samme navn
+//Og det spil bliver så listet sammen med den andre spil som er blevet tilføjet.
 public class MakeGames {
 
 	public static void main(String[] strings)
