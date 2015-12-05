@@ -6,9 +6,10 @@ import server.backend.Services;
 import database.User;
 
 public class MakeUsers {
+	//
 	public static void main(String[] strings)
     {
-        String[] names = {"", "", "", "", ""};
+        String[] names = {"husk", "at", "sætte", "nogle", "navne"};
         for(String name : names)
         {
             User user = new User();
