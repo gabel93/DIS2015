@@ -7,5 +7,14 @@ import database.Game;
 
 public class MakeGames {
 
+	public static void main(String[] strings)
+    {
+        String[] names = {"", "", ""};
+        for(String name : names)
+        {
+            Game game = new Game();
+            game.setName(name);
+            Services.INSTANCE.add(game);
+        }
 }
  
