@@ -17,4 +17,12 @@ public class MakeUsers {
             Services.INSTANCE.add(user);
         }
 
+        List<User> users = Services.INSTANCE.getUsers();
+        System.out.println("Current users: ");
+        for(User user : users)
+        {
+            System.out.println(user.getUsername());
+        }
+    }
+}
 
