@@ -221,7 +221,7 @@ public class Client
       request.setName(name);
       
       boolean successful = (boolean) this.sendRequest(request);
-      System.out.println(successful ? "Game \"" + name + "\" Your game has been deleted successfully." : "Failed to delete game \"" + name + "\".");
+      System.out.println(successful ? "Game \"" + name + "\" Your game has been deleted successfully." : "The game has failed to be deleted \"" + name + "\".");
   }
 //showgame request sendes til serv
   private void showGame()
