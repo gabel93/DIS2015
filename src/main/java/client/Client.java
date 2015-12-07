@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import protocol.CreateGameRequest;
+import protocol.DeleteGameRequest;
 
 public class Client {
 
