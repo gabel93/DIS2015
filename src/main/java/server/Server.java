@@ -66,7 +66,7 @@ public class Server
         public void run()
         {
             try(ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
-                    ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());)
+               ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());)
             {
                 while(true)
                 {
