@@ -15,6 +15,7 @@ import protocol.HelloRequest;
 import protocol.LoginRequest;
 import protocol.LogoutRequest;
 import protocol.PlayGameRequest;
+import protocol.SetCommandsRequest;
 
 public class Server {
 
