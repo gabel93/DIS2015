@@ -106,18 +106,18 @@ public class Client
   
   private boolean login()
   {
-      System.out.print("Username? [Jens]: ");
+      System.out.print("Username? [Admin]: ");
       username = scanner.nextLine();
       if(username.length() == 0)
       {
-          username = "Jens";
+          username = "Admin";
       }
 
-      System.out.print("Password? [Gabel]: ");
+      System.out.print("Password? [Password]: ");
       String password = scanner.nextLine();
       if(password.length() == 0)
       {
-          password = "Gabel";
+          password = "Password";
       }
      
       //login request oprettes
