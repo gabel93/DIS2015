@@ -145,20 +145,22 @@ public class Client
       request.setUsername(username);
       this.sendRequest(request);
   }
-  //creategame request sendes til serv
-  private void createGame()
+    //gethighscores request sendes til serv
+  private void getHighScores()
   {
-      System.out.print("Game name? ");
-      String name = scanner.nextLine();
+      GetHighScoresRequest request = new GetHighScoresRequest();
+      request.setNumber(10);
       
-      CreateGameRequest request = new CreateGameRequest();
-      Game game = new Game();
-      request.setGame(game);
-      game.setName(name);
-      
-      Game resultGame = (Game) this.sendRequest(request);
-      System.out.println(resultGame == null ? "Failed to create game \"" + name + "\"." :"Game \"" + name + "\" created successfully.");
+      List<Game> games = (List<Game>) this.sendRequest(request);
+      System.out.println("High scores:");
+      int index = 1;
+      for(Game game : games)
+      {
+          System.out.println(index + "\t\t" + game.getName() + "\t\t" + game.getHighScore());
+          index++;
+      }
   }
+   
 //setcommands request sendes til serv
   private void setCommands()
   {
@@ -176,20 +178,19 @@ public class Client
       boolean successful = (boolean) this.sendRequest(request);
       System.out.println(successful ? "Commands set successfully." : "Failed to set commands.");
   }
-  //gethighscores request sendes til serv
-  private void getHighScores()
+//creategame request sendes til serv
+  private void createGame()
   {
-      GetHighScoresRequest request = new GetHighScoresRequest();
-      request.setNumber(10);
+      System.out.print("Game name? ");
+      String name = scanner.nextLine();
       
-      List<Game> games = (List<Game>) this.sendRequest(request);
-      System.out.println("High scores:");
-      int index = 1;
-      for(Game game : games)
-      {
-          System.out.println(index + "\t\t" + game.getName() + "\t\t" + game.getHighScore());
-          index++;
-      }
+      CreateGameRequest request = new CreateGameRequest();
+      Game game = new Game();
+      request.setGame(game);
+      game.setName(name);
+      
+      Game resultGame = (Game) this.sendRequest(request);
+      System.out.println(resultGame == null ? "Failed to create game \"" + name + "\"." :"Game \"" + name + "\" created successfully.");
   }
   //deleteGame request sendes til serv
   private void deleteGame()
