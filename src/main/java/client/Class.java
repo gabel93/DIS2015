@@ -15,6 +15,7 @@ import protocol.LoginRequest;
 import protocol.LogoutRequest;
 import protocol.PlayGameRequest;
 import protocol.SetCommandsRequest;
+import database.Game;
 
 public class Class {
 
