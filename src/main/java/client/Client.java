@@ -9,6 +9,7 @@ import java.util.Scanner;
 import protocol.CreateGameRequest;
 import protocol.DeleteGameRequest;
 import protocol.GetGameRequest;
+import protocol.GetHighScoresRequest;
 
 public class Client {
 
