@@ -6,6 +6,8 @@ import java.net.Socket;
 import java.util.List;
 import java.util.Scanner;
 
+import protocol.CreateGameRequest;
+
 public class Class {
 
 }
