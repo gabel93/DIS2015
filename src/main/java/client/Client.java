@@ -290,7 +290,7 @@ public class Client
           {
               ;
           }
-          System.out.println("Invalid input!");
+          System.out.println(" The input is invalid!");
       }
   }
 }
