@@ -21,5 +21,15 @@ import database.Game;
 import database.User;
 
 public class Server {
-
+	
+	public static void main(String[] strings)
+    {
+        new Server(2345).start();
+    }
+    
+    private final int port;
+    
+    public Server(int port)
+    {
+        this.port = port;
 }
