@@ -11,6 +11,7 @@ import protocol.DeleteGameRequest;
 import protocol.GetGameRequest;
 import protocol.GetHighScoresRequest;
 import protocol.HelloRequest;
+import protocol.LoginRequest;
 
 public class Class {
 
