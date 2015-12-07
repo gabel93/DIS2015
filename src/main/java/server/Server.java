@@ -9,6 +9,7 @@ import java.util.List;
 
 import protocol.CreateGameRequest;
 import protocol.DeleteGameRequest;
+import protocol.GetGameRequest;
 
 public class Server {
 
