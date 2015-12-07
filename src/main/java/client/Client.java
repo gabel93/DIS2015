@@ -192,19 +192,7 @@ public class Client
       Game resultGame = (Game) this.sendRequest(request);
       System.out.println(resultGame == null ? "Failed to create game \"" + name + "\"." :"Game \"" + name + "\" created successfully.");
   }
-  //deleteGame request sendes til serv
-  private void deleteGame()
-  {
-      System.out.print("Game name? ");
-      String name = scanner.nextLine();
-      
-      DeleteGameRequest request = new DeleteGameRequest();
-      request.setName(name);
-      
-      boolean successful = (boolean) this.sendRequest(request);
-      System.out.println(successful ? "Game \"" + name + "\" deleted successfully." : "Failed to delete game \"" + name + "\".");
-  }
-//startGame request sendes til serv
+ //startGame request sendes til serv
   private void startGame()
   {
       System.out.print("Game name? ");
@@ -222,6 +210,18 @@ public class Client
       
       System.out.println(game.getPlayer1() + " V.S. " + game.getPlayer2());
       System.out.println(game.getLastResult());
+  }
+  //deleteGame request sendes til serv
+  private void deleteGame()
+  {
+      System.out.print("Game name? ");
+      String name = scanner.nextLine();
+      
+      DeleteGameRequest request = new DeleteGameRequest();
+      request.setName(name);
+      
+      boolean successful = (boolean) this.sendRequest(request);
+      System.out.println(successful ? "Game \"" + name + "\" deleted successfully." : "Failed to delete game \"" + name + "\".");
   }
 //showgame request sendes til serv
   private void showGame()
