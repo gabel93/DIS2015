@@ -8,6 +8,7 @@ import java.net.Socket;
 import java.util.List;
 
 import protocol.CreateGameRequest;
+import protocol.DeleteGameRequest;
 
 public class Server {
 
