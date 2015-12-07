@@ -176,7 +176,7 @@ public class Client
       request.setCommands(commands);
       
       boolean successful = (boolean) this.sendRequest(request);
-      System.out.println(successful ? "Commands set successfully." : "Failed to set commands.");
+      System.out.println(successful ? "Commands is now set successfully." : "Your comands is incorrect(failed).");
   }
 //creategame request sendes til serv
   private void createGame()
