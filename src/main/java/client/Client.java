@@ -190,7 +190,7 @@ public class Client
       game.setName(name);
       
       Game resultGame = (Game) this.sendRequest(request);
-      System.out.println(resultGame == null ? "Failed to create game \"" + name + "\"." :"Game \"" + name + "\" created successfully.");
+      System.out.println(resultGame == null ? "You have failed to create game the certain game \"" + name + "\"." :"Game \"" + name + "\" created successfully.");
   }
  //startGame request sendes til serv
   private void startGame()
