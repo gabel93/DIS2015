@@ -22,16 +22,16 @@ import database.User;
 
 public class Server
 {
-	   public static void main(String[] strings)
-	    {
-	        new Server(2345).start();
-	    }
-	    
-	    private final int port;
-	    
-	    public Server(int port)
-	    {
-	        this.port = port;
+    public static void main(String[] strings)
+    {
+        new Server(2345).start();
+    }
+    
+    private final int port;
+    
+    public Server(int port)
+    {
+        this.port = port;
     }
     
     public void start()
@@ -66,7 +66,7 @@ public class Server
         public void run()
         {
             try(ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
-               ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());)
+                    ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());)
             {
                 while(true)
                 {
