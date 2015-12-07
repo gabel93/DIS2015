@@ -17,6 +17,7 @@ import protocol.LogoutRequest;
 import protocol.PlayGameRequest;
 import protocol.SetCommandsRequest;
 import server.backend.Services;
+import database.Game;
 
 public class Server {
 
