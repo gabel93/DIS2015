@@ -13,6 +13,7 @@ import protocol.GetHighScoresRequest;
 import protocol.HelloRequest;
 import protocol.LoginRequest;
 import protocol.LogoutRequest;
+import protocol.PlayGameRequest;
 
 public class Class {
 
