@@ -17,6 +17,3 @@ import protocol.PlayGameRequest;
 import protocol.SetCommandsRequest;
 import database.Game;
 
-public class Client {
-
-}
