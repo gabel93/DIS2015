@@ -16,24 +16,24 @@ import protocol.LoginRequest;
 import protocol.LogoutRequest;
 import protocol.PlayGameRequest;
 import protocol.SetCommandsRequest;
-import server.Server.SocketThread;
 import server.backend.Services;
 import database.Game;
 import database.User;
 
-public class Server {
-	
-	public static void main(String[] strings)
-    {
-        new Server(2345).start();
+public class Server
+{
+	   public static void main(String[] strings)
+	    {
+	        new Server(2345).start();
+	    }
+	    
+	    private final int port;
+	    
+	    public Server(int port)
+	    {
+	        this.port = port;
     }
     
-    private final int port;
-    
-    public Server(int port)
-    {
-        this.port = port;
-}
     public void start()
     {
         try(ServerSocket serverSocket = new ServerSocket(port))
