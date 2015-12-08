@@ -265,7 +265,7 @@ public class Services
         
         if(score1 > score2)
         {
-            System.out.println("Winner is " + player1 + "!");
+            System.out.println("AAAnd the winner is " + player1 + "!");
             game.setHighScore(score1);
             game.setLastResult(player1 + " won the game with " + score1 + ".");
         }else
