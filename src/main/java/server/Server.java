@@ -38,7 +38,7 @@ public class Server
     {
         try(ServerSocket serverSocket = new ServerSocket(port))
         {
-            System.out.println("Server started at " + port + ".");
+            System.out.println("Server is now started at " + port + ".");
             while(true)
             {
                 Socket socket = serverSocket.accept();
