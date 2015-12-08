@@ -69,7 +69,7 @@ public class Client
           inputStream.readObject();
           System.out.println("Server is now connected.");
           
-          // Login.
+      // Login.
           while(!this.login())
           {
               ;
