@@ -103,13 +103,13 @@ public class Services
      * @param user
      * @return
      */
-  //giver besked til db om at gemme use
+  //giver besked til databasen om at gemme user
     public User add(User user)
     {
         sessionTool.save(user);
         return user;
     }
-    //henter user fra DB
+    //omvendt henter den her user fra database.
     public User getUser(long id)
     {
         return sessionTool.get(User.class, id);
