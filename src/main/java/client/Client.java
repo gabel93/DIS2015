@@ -194,7 +194,7 @@ public class Client
       Game resultGame = (Game) this.sendRequest(request);
       System.out.println(resultGame == null ? "You have failed to create the certain game \"" + name + "\"." :"Game \"" + name + "\" created successfully.");
   }
-   //startGame request sendes til serv
+      //En simpel startGame request sendes til serveren. 
   private void startGame()
   {
       System.out.print("Game name? ");
