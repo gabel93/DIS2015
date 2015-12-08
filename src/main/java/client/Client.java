@@ -17,7 +17,7 @@ import protocol.PlayGameRequest;
 import protocol.SetCommandsRequest;
 import database.Game;
 
-//underminere advarslen, ved godt selv det kan kører
+//Dette element i koden underminere advarslen, da det godt selv ved det kan kører
 @SuppressWarnings("unchecked")
 
 //Dette er klienten som connector til serveren og giver adgang til brugermenuen. 
