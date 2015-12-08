@@ -77,7 +77,7 @@ public class Services
        //Her bliver nye brugere tildelt og et loginkey bliver genereret idet brugeren logger ind.
         User user = users.get(0);
         String loginKey = UUID.randomUUID().toString();
-       //Understående kode tilegner brugeren end loginkey og opdaterer i databasen
+       //Understående kode tilegner brugeren end loginkey og opdaterer i databasen.
         user.setLoginKey(loginKey);
         sessionTool.update(user);
         return loginKey;
