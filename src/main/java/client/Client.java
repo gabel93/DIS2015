@@ -128,8 +128,8 @@ public class Client
         request.setUsername(username);
         request.setPassword(password);
         String loginKey = (String) this.sendRequest(request);
-        //der er loginkey så programmet har noget referere til når man skal logge ind.
-        //denne boolean tjekker loginKey
+      //Der er oprettet en loginkey så programmet har noget referere til når man skal logge ind, den undertegnede
+      //boolean tjekker loginKey.
         boolean successful = loginKey != null;
       //Da der bliver genereret et loginkey ved login kan vi antage,
         //at hvis loginkey ikke er lig null, vil brugeren være logget ind.
