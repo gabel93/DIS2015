@@ -132,7 +132,7 @@ public class Client
       //boolean tjekker loginKey.
         boolean successful = loginKey != null;
       //Da der ved login bliver generet et loginkey kan vi antage, at hvis loginkey ikke er lig nul, vil brugeren være logget ind.
-        System.out.println(successful ? "You have now logged in successfully." : "Failed to login.");
+        System.out.println(successful ? "You have now logged in successfully." : "You have failed to login.");
         
         return successful;
     }
