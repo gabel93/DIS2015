@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class DbConfiguration
 {
-	//Databasen kortlægges og variabler navngives som gjort i db.proporties.xml dokumentet
+	//Databasen bliver kortlagt og variabler navngives som gjort i xml dokumentet (db.proporties)
     public static final String DB_PROPERTIES_PATH = "/db.properties";
     public static final String DRIVER_CLASS_NAME = "driverClassName";
     public static final String URL = "url";
