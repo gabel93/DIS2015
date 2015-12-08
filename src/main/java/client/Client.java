@@ -163,7 +163,7 @@ public class Client
       }
   }
    
-//setcommands request sendes til serv
+      //En simpel setcommands request sendes til serveren.
   private void setCommands()
   {
       System.out.print("Game name? ");
