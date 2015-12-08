@@ -199,7 +199,7 @@ public class Client
         request.setName(name);
         
         boolean successful = (boolean) this.sendRequest(request);
-        System.out.println(successful ? "Game \"" + name + "\" is now deleted successfully." : "Failed to delete game \"" + name + "\".");
+        System.out.println(successful ? "Game \"" + name + "\" is now deleted successfully." : "You have failed to delete game \"" + name + "\".");
     }
     //StartGame request -->Server
     private void startGame()
