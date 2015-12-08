@@ -125,13 +125,16 @@ public class Client
       LoginRequest request = new LoginRequest();
       
       //Username og password bliver defineret som users input. 
+      
       request.setUsername(username);
       request.setPassword(password);
       String loginKey = (String) this.sendRequest(request);
-      //der er loginkey så programmet har noget referere til når man skal logge ind.
-      //denne boolean tjekker loginKey
+      
+      //Der er blevet oprettet loginkey så programmet har noget at referere til når man skal logge ind.
+      //OG denne boolean tjekker loginKey
+     
       boolean successful = loginKey != null;
-    //Da der bliver genereret et loginkey ved login kan vi antage,
+      //Da der bliver genereret et loginkey ved login kan vi antage,
       //at hvis loginkey ikke er lig null, vil brugeren være logget ind.
       System.out.println(successful ? "You are now logged in." : " You have failed to login.");
       
