@@ -201,7 +201,7 @@ public class Client
         boolean successful = (boolean) this.sendRequest(request);
         System.out.println(successful ? "Game \"" + name + "\" deleted successfully." : "Failed to delete game \"" + name + "\".");
     }
-  //StartGame request -->Server
+    //StartGame request -->Server
     private void startGame()
     {
         System.out.print("Game name? ");
