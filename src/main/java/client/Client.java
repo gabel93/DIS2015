@@ -55,7 +55,7 @@ public class Client
         {
             portString = "2345";
         }
-        //Portnummeret vil være en string og oversættes derfor herunder til en int
+        //Portnummeret vil være en string og oversættes derfor herunder til en integer.
         int port = Integer.parseInt(portString);
         
         try(Socket socket = new Socket(host, port))
