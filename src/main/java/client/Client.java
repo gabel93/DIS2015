@@ -20,7 +20,7 @@ import database.Game;
 //Dette element i koden underminere advarslen, da det godt selv ved det kan kører
 @SuppressWarnings("unchecked")
 
-//Dette er klienten som connector til serveren og giver adgang til brugermenuen. 
+//Her connector klienten til serveren og giver adgang til brugermenuen. 
 public class Client
 {
   public static void main(String[] strings)
