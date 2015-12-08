@@ -174,7 +174,7 @@ public class Client
         boolean successful = (boolean) this.sendRequest(request);
         System.out.println(successful ? "Commands set successfully." : "Failed to set commands.");
     }
-    //gethighscores request sendes til serv
+    //Gethighscores request -->Server
     private void getHighScores()
     {
         GetHighScoresRequest request = new GetHighScoresRequest();
