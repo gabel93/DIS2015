@@ -91,7 +91,7 @@ public class Services
         {
             return false;
         }
-        //idet logout finder sted sÃ¦ttes loginkey igen til 0 
+        //Når logout finder sted sættes loginkey igen til nul
         user.setLoginKey(null);
       //bliver nu opdateret i databasen
         sessionTool.update(user);
