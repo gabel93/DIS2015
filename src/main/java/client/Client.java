@@ -189,7 +189,7 @@ public class Client
             index++;
         }
     }
-    //deleteGame request sendes til serv
+    //DeleteGame request -->Server
     private void deleteGame()
     {
         System.out.print("Game name? ");
