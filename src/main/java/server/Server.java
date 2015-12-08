@@ -113,14 +113,14 @@ public class Server
                 return false;
             }else if(request instanceof CreateGameRequest)
             {
-                Game game = Services.INSTANCE.add(((CreateGameRequest) request).getGame());
-                outputStream.writeObject(game);
-            }else if(request instanceof DeleteGameRequest)
-            {
                 Game game = Services.INSTANCE.getGameByName(((DeleteGameRequest) request).getName());
                 Services.INSTANCE.deleteGame(game.getId());
                 outputStream.writeObject(true);
             }else if(request instanceof SetCommandsRequest)
+            {
+            	Game game = Services.INSTANCE.add(((CreateGameRequest) request).getGame());
+                outputStream.writeObject(game);
+            }else if(request instanceof DeleteGameRequest)
             {
                 SetCommandsRequest setCommandRequest = (SetCommandsRequest) request;
                 Game game = Services.INSTANCE.getGameByName(setCommandRequest.getGameName());
