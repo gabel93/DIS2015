@@ -27,11 +27,10 @@ public class Client
     {
         new Client().start();
     }
-    //programmet er bygget op efter request/response protocol
-    //derfor har jeg importeret ObjectInputStreamm og ObjectOutpytStream
-    //til at simplificere processen hvor der hentes og sendes data
+//Da programmet er bygget op efter request/response protocol har jeg blot importeret ObjectInputStreamm og ObjectOutputStream
+//til at enkeltgøre den proces hvor data bliver hentet.
     
-    //Variabler instantieres
+//Variabler instantieres
     private final Scanner scanner = new Scanner(System.in);
     private ObjectInputStream inputStream;
     private ObjectOutputStream outputStream;
