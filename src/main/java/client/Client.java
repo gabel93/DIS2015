@@ -220,7 +220,7 @@ public class Client
         System.out.println(game.getPlayer1() + " V.S. " + game.getPlayer2());
         System.out.println(game.getLastResult());
     }
-  //showgame request sendes til serv
+   //Showgame request -->Server
     private void showGame()
     {
         System.out.print("Game name? ");
