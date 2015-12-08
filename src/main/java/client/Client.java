@@ -140,7 +140,7 @@ public class Client
       
       return successful;
   }
-      //En simpel logout request sendes til serv
+      //En simpel logout request sendes til serveren.
   private void logout()
   {
       LogoutRequest request = new LogoutRequest();
