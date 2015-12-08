@@ -98,14 +98,14 @@ public class Server
             Object request = inputStream.readObject();
             if(request instanceof HelloRequest)
             {
+            	 LoginRequest loginRequest = (LoginRequest) request;
+                 String loginKey = Services.INSTANCE.login(loginRequest.getUsername(), loginRequest.getPassword());
+                 outputStream.writeObject(loginKey);
+             }else if(request instanceof LogoutRequest)
+             {
                 String name = ((HelloRequest) request).getName();
                 outputStream.writeObject("Hello " + name);
             }else if(request instanceof LoginRequest)
-            {
-                LoginRequest loginRequest = (LoginRequest) request;
-                String loginKey = Services.INSTANCE.login(loginRequest.getUsername(), loginRequest.getPassword());
-                outputStream.writeObject(loginKey);
-            }else if(request instanceof LogoutRequest)
             {
                 User user = Services.INSTANCE.getUserByUsername(((LogoutRequest) request).getUsername());
                 boolean successful = Services.INSTANCE.logout(user.getId());
