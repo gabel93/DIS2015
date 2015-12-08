@@ -30,7 +30,7 @@ public class DbConfiguration
     @Bean
     public DataSource dataSource()
     {
-    	//input stream defineres til DB_PROPERTIES_PATH der ovenover er defineret som XML dokumentet
+    	//Input stream bliver defineres til DB_PROPERTIES_PATH der er defineret som XML dokumentet
     	//db.proporties.xml 
         InputStream inputStream = DbConfiguration.class.getResourceAsStream(DB_PROPERTIES_PATH);
         Properties properties = new Properties();
@@ -41,7 +41,7 @@ public class DbConfiguration
         {
             throw new RuntimeException(e);
         }
-      //tjek ordenligt op på metode for properties
+      //
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName(properties.getProperty(DRIVER_CLASS_NAME));
         dataSource.setUrl(properties.getProperty(URL));
