@@ -48,7 +48,7 @@ public class Client
       
       System.out.print("Server port? [2345]: ");
       String portString = scanner.nextLine().trim();
-    //bruger indtaster server port - er længden på det indtastede 0, vil det automatisk
+      //bruger indtaster server port - er længden på det indtastede 0, vil det automatisk
       //være port 2345
            if(portString.length() == 0)
       {
