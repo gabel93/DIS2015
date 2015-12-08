@@ -40,8 +40,8 @@ public class Client
     {
         System.out.print("Server host? [localhost]: ");
         String host = scanner.nextLine().trim();
-        //bruger indtaster server host - er længden på det indtastede 0, vil det automatisk
-        //være localhost
+        //Brugeren indtaster server host(localhost)-Er længden på det indtastede nul,
+        //vil det automatisk være localhost
               if(host.length() == 0)
                   {
             host = "localhost";
