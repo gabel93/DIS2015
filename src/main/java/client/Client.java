@@ -30,7 +30,7 @@ public class Client
   //Programmet er bygget op efter request/response protocol, derfor er der importeret ObjectInputStreamm og ObjectOutputStream
   //til at simplificere processen hvor der hentes og sendes data.
   
-  //Variabler instantieres
+  //Her bliver de forskellige variabler instantieres
   private final Scanner scanner = new Scanner(System.in);
   private ObjectInputStream inputStream;
   private ObjectOutputStream outputStream;
