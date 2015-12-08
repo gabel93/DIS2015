@@ -36,7 +36,7 @@ public class Services
             throw new RuntimeException(e);
         }
         
-   // Her bliver Admin oprettet hvis ikke den eksisterer "allerede".
+   //Her bliver Admin oprettet hvis ikke den eksisterer "allerede".
         User admin = INSTANCE.getUserByUsername(ADMIN_USERNAME);
         if(admin == null)
         {
@@ -74,10 +74,10 @@ public class Services
             return null;
         }
         
-       //Her bliver nye bruger tildelt og loginkey bliver lavet når brugeren logger ind
+    //Her bliver nye bruger tildelt og loginkey bliver lavet når brugeren logger ind
         User user = users.get(0);
         String loginKey = UUID.randomUUID().toString();
-      // Her bliver brugeren tildelt en loginkey og det bliver opdaterer i databasen
+    //Her bliver brugeren tildelt en loginkey og det bliver opdaterer i databasen
         user.setLoginKey(loginKey);
         sessionTool.update(user);
         return loginKey;
