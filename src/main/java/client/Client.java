@@ -27,8 +27,7 @@ public class Client
   {
       new Client().start();
   }
-  //Programmet er bygget op efter request/response protocol
-  //derfor har jeg importeret ObjectInputStreamm og ObjectOutpytStream
+  //Programmet er bygget op efter request/response protocol, derfor er der importeret ObjectInputStreamm og ObjectOutpytStream
   //til at simplificere processen hvor der hentes og sendes data
   
   //Variabler instantieres
