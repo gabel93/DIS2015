@@ -67,7 +67,7 @@ public class Client
             outputStream.writeObject(request);
             inputStream = new ObjectInputStream(socket.getInputStream());
             inputStream.readObject();
-            System.out.println("Server connected.");
+            System.out.println("Server is now connected.");
             
             // Login.
             while(!this.login())
