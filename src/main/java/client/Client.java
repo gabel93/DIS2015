@@ -119,7 +119,7 @@ public class Client
             password = "password";
         }
        
-        //login request oprettes
+      //Det er vigtigt at ligge mærke til at det er login request som bliver oprettet her.
         
         
         LoginRequest request = new LoginRequest();
