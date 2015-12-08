@@ -147,7 +147,7 @@ public class Client
       request.setUsername(username);
       this.sendRequest(request);
   }
-    //gethighscores request sendes til serv
+      //En simpel gethighscores request sendes til serveren. 
   private void getHighScores()
   {
       GetHighScoresRequest request = new GetHighScoresRequest();
