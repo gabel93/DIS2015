@@ -136,7 +136,7 @@ public class Client
         
         return successful;
     }
-    //logout request sendes til serv
+      //Logout request -->Server
     private void logout()
     {
         LogoutRequest request = new LogoutRequest();
