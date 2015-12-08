@@ -74,7 +74,7 @@ public class Services
             return null;
         }
         
-    //Her bliver nye bruger tildelt og loginkey bliver lavet når brugeren logger ind
+    //Her bliver nye bruger tildelt og loginkey bliver lavet når brugeren logger ind.
         User user = users.get(0);
         String loginKey = UUID.randomUUID().toString();
     //Her bliver brugeren tildelt en loginkey og det bliver opdaterer i databasen
