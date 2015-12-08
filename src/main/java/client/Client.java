@@ -172,7 +172,7 @@ public class Client
         request.setCommands(commands);
         
         boolean successful = (boolean) this.sendRequest(request);
-        System.out.println(successful ? "Commands set successfully." : "Failed to set commands.");
+        System.out.println(successful ? "Commands is set successfully." : "Failed to set commands.");
     }
     //Gethighscores request -->Server
     private void getHighScores()
