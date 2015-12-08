@@ -124,7 +124,7 @@ public class Client
         
         LoginRequest request = new LoginRequest();
         
-      //username og password bliver defineret som users input. 
+      //Users input bliver def. som username og password. 
         request.setUsername(username);
         request.setPassword(password);
         String loginKey = (String) this.sendRequest(request);
