@@ -213,7 +213,7 @@ public class Client
         Game game = (Game) this.sendRequest(request);
         if(game == null)
         {
-            System.out.println("No such game.");
+            System.out.println("No such game excist.");
             return;
         }
         
