@@ -157,7 +157,7 @@ public class Client
         Game resultGame = (Game) this.sendRequest(request);
         System.out.println(resultGame == null ? "Failed to create game \"" + name + "\"." :"Game \"" + name + "\" created successfully.");
     }
-  //setcommands request sendes til serv
+      //Setcommands request -->Server
     private void setCommands()
     {
         System.out.print("Game name? ");
