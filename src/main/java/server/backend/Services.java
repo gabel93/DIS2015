@@ -295,7 +295,7 @@ public class Services
         
         if(position.x < 0|| position.x >= size.x|| position.y < 0|| position.y >= size.y)
         {
-            System.out.println(playerName + " ran into a wall.");
+            System.out.println(playerName + " guided himself into a wall.");
             return false;
         }else if(position.x == opponent.x&& position.y == opponent.y)
         {
