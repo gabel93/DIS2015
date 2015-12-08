@@ -143,7 +143,7 @@ public class Client
         request.setUsername(username);
         this.sendRequest(request);
     }
-    //creategame request sendes til serv
+      //Creategame request -->Server
     private void createGame()
     {
         System.out.print("Game name? ");
