@@ -270,7 +270,7 @@ public class Services
             game.setLastResult(player1 + " won the game with " + score1 + ".");
         }else
         {
-            System.out.println("Winner is " + player2 + "!");
+            System.out.println("AAAnd the winner is " + player2 + "!");
             game.setHighScore(score2);
             game.setLastResult(player2 + " won the game with " + score2 + ".");
         }
