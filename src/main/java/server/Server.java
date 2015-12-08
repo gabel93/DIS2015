@@ -42,7 +42,7 @@ public class Server
             while(true)
             {
                 Socket socket = serverSocket.accept();
-                System.out.println("Client connected from " + socket.getRemoteSocketAddress() + ".");
+                System.out.println("Client is connected from " + socket.getRemoteSocketAddress() + ".");
                 
                 new SocketThread(socket).start();
             }
