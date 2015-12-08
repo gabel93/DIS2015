@@ -36,7 +36,7 @@ public class Services
             throw new RuntimeException(e);
         }
         
-   //Her bliver Admin oprettet hvis ikke den eksisterer "allerede".
+        // Create the admin if not exist.
         User admin = INSTANCE.getUserByUsername(ADMIN_USERNAME);
         if(admin == null)
         {
@@ -74,10 +74,11 @@ public class Services
             return null;
         }
         
-    //Her bliver nye bruger tildelt og loginkey bliver lavet når brugeren logger ind.
+       //Her får nye bruger tildelt, 
+      //loginkey bliver genereret idet brugeren logger ind
         User user = users.get(0);
         String loginKey = UUID.randomUUID().toString();
-    //Her bliver brugeren tildelt en loginkey og det bliver opdaterer i databasen.
+      //understÃ¥ende kode tilegner brugeren end loginkey og opdaterer i databasen
         user.setLoginKey(loginKey);
         sessionTool.update(user);
         return loginKey;
@@ -85,15 +86,15 @@ public class Services
     
     public boolean logout(long id)
     {
-    //Den nuværende user som bliver defineret/indikeret af "this", bliver logget ud
+    	//den nuvÃ¦rende user indikeret af "this", bliver logget ud
         User user = this.getUser(id);
         if(user == null)
         {
             return false;
         }
-    //Da logout finder sted sættes loginkey regelmæssigt igen til 0 
+        //idet logout finder sted sÃ¦ttes loginkey igen til 0 
         user.setLoginKey(null);
-    //Her bliver det opdateret i databasen
+      //bliver nu opdateret i databasen
         sessionTool.update(user);
         return true;
     }
@@ -103,13 +104,13 @@ public class Services
      * @param user
      * @return
      */
-    //Her giver 'sessiontool' besked til db om at gemme user
+  //giver besked til db om at gemme use
     public User add(User user)
     {
         sessionTool.save(user);
         return user;
     }
-    //Her hentes user fra databasen
+    //henter user fra DB
     public User getUser(long id)
     {
         return sessionTool.get(User.class, id);
@@ -265,12 +266,12 @@ public class Services
         
         if(score1 > score2)
         {
-            System.out.println("AAAnd the winner is " + player1 + "!");
+            System.out.println("Winner is " + player1 + "!");
             game.setHighScore(score1);
             game.setLastResult(player1 + " won the game with " + score1 + ".");
         }else
         {
-            System.out.println("AAAnd the winner is " + player2 + "!");
+            System.out.println("Winner is " + player2 + "!");
             game.setHighScore(score2);
             game.setLastResult(player2 + " won the game with " + score2 + ".");
         }
@@ -295,11 +296,11 @@ public class Services
         
         if(position.x < 0|| position.x >= size.x|| position.y < 0|| position.y >= size.y)
         {
-            System.out.println(playerName + " guided himself into a wall.");
+            System.out.println(playerName + " ran into a wall.");
             return false;
         }else if(position.x == opponent.x&& position.y == opponent.y)
         {
-            System.out.println(playerName + " guided himself into the opponent.");
+            System.out.println(playerName + " ran into the opponent.");
             return false;
         }else
         {

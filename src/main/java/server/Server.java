@@ -38,11 +38,11 @@ public class Server
     {
         try(ServerSocket serverSocket = new ServerSocket(port))
         {
-            System.out.println("Server is now started at " + port + ".");
+            System.out.println("Server started at " + port + ".");
             while(true)
             {
                 Socket socket = serverSocket.accept();
-                System.out.println("Client is connected from " + socket.getRemoteSocketAddress() + ".");
+                System.out.println("Client connected from " + socket.getRemoteSocketAddress() + ".");
                 
                 new SocketThread(socket).start();
             }
@@ -66,7 +66,7 @@ public class Server
         public void run()
         {
             try(ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
-            ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());)
+                    ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());)
             {
                 while(true)
                 {
@@ -87,25 +87,23 @@ public class Server
             }
         }
         
-   //De forskellige menupunkter bliver tjekket en for en i login. 
-   //Handlerrequest er oprettet som boolean, hvilket er ensbetydende med; 
-   //Der enten godtages en request, hvis den er sand, eller springer videre til næste.
-   //De forskellige request er inde under protocol "package" og er simple klasser der kan hente og sende data.
-   
-   //Så i bund og grund tjekker denne metode hvilken request der skal håndteres
+        //de forskellige menupunkter bliver tjekket en for en i login
+        //Handlerrequest er oprettet som boolean, der enten godtager requesten hvis den er sand. eller springer videre til næste
+        //De forskellige request er inde under protocol "package" og er simple klasser der kan hente og sende dato.
+        //tjekker hvilken request der skal hÃ¥ndteres
         private boolean handleRequest(ObjectInputStream inputStream, ObjectOutputStream outputStream) throws Exception
         {
             Object request = inputStream.readObject();
             if(request instanceof HelloRequest)
             {
-            	 LoginRequest loginRequest = (LoginRequest) request;
-                 String loginKey = Services.INSTANCE.login(loginRequest.getUsername(), loginRequest.getPassword());
-                 outputStream.writeObject(loginKey);
-             }else if(request instanceof LogoutRequest)
-             {
                 String name = ((HelloRequest) request).getName();
                 outputStream.writeObject("Hello " + name);
             }else if(request instanceof LoginRequest)
+            {
+                LoginRequest loginRequest = (LoginRequest) request;
+                String loginKey = Services.INSTANCE.login(loginRequest.getUsername(), loginRequest.getPassword());
+                outputStream.writeObject(loginKey);
+            }else if(request instanceof LogoutRequest)
             {
                 User user = Services.INSTANCE.getUserByUsername(((LogoutRequest) request).getUsername());
                 boolean successful = Services.INSTANCE.logout(user.getId());
@@ -113,14 +111,14 @@ public class Server
                 return false;
             }else if(request instanceof CreateGameRequest)
             {
+                Game game = Services.INSTANCE.add(((CreateGameRequest) request).getGame());
+                outputStream.writeObject(game);
+            }else if(request instanceof DeleteGameRequest)
+            {
                 Game game = Services.INSTANCE.getGameByName(((DeleteGameRequest) request).getName());
                 Services.INSTANCE.deleteGame(game.getId());
                 outputStream.writeObject(true);
             }else if(request instanceof SetCommandsRequest)
-            {
-            	Game game = Services.INSTANCE.add(((CreateGameRequest) request).getGame());
-                outputStream.writeObject(game);
-            }else if(request instanceof DeleteGameRequest)
             {
                 SetCommandsRequest setCommandRequest = (SetCommandsRequest) request;
                 Game game = Services.INSTANCE.getGameByName(setCommandRequest.getGameName());

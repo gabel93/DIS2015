@@ -19,22 +19,23 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class DbConfiguration
 {
-	//Databasen bliver kortlagt og variabler navngives som gjort i xml dokumentet (db.proporties)
+	//Databasen kortlægges og variabler navngives som gjort i db.proporties.xml dokumentet
     public static final String DB_PROPERTIES_PATH = "/db.properties";
     public static final String DRIVER_CLASS_NAME = "driverClassName";
     public static final String URL = "url";
     public static final String USERNAME = "username";
     public static final String PASSWORD = "password";
-    /* "Javabeans" er klasser der indkapsler flere objekter ind i et enestående objekt (bean)
+    
+    /* "Javabeans" er klasser der indkapsler flere objekter ind i et enestÃ¥ende objekt (bean)
      * De er alle serilizable og har alle zero-argument constructer og tillader adgang til 
      * egenskaberne ved at bruge getter og setter metoder. 
      */
+    
     @Bean
-   
     public DataSource dataSource()
     {
-    //input stream bliver defineret som DB_PROPERTIES_PATH der ovenover er defineret som mit xml dokument
-    //db.proporties.xml 
+    	//input stream defineres til DB_PROPERTIES_PATH der ovenover er defineret som XML dokumentet
+    	//db.proporties.xml 
         InputStream inputStream = DbConfiguration.class.getResourceAsStream(DB_PROPERTIES_PATH);
         Properties properties = new Properties();
         try
@@ -44,7 +45,7 @@ public class DbConfiguration
         {
             throw new RuntimeException(e);
         }
-        //tjek ordenligt op på metode for properties
+      //tjek ordenligt op pÃ¥ metode for properties
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName(properties.getProperty(DRIVER_CLASS_NAME));
         dataSource.setUrl(properties.getProperty(URL));

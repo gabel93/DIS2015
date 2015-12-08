@@ -6,13 +6,9 @@ import server.backend.Services;
 import database.Game;
 import database.User;
 
-//Denne klasse har til formål at skabe et text user interface. her skal der være mulighed
-//for at opfylde de krav som er kravspec. derfor bliver både database game og user + backend
-//importeret til klassen. f.eks. kan man se mange af de kommandoer man skal foretage sig
-//for at komme rundt i ''programmet''.
-public class Tui {
-
-	public static void main(String[] strings)
+public class Tui
+{
+    public static void main(String[] strings)
     {
         new Tui().start();
     }
@@ -21,7 +17,7 @@ public class Tui {
     
     public void start()
     {
-    	while(true)
+        while(true)
         {
             System.out.print("Admin username? [Admin]: ");
             String username = scanner.nextLine();
@@ -43,21 +39,21 @@ public class Tui {
                 break;
             }
             System.out.println("This is not a valid admin.");
-        }	
-    	
-    	questions:
-            while(true)
+        }
+        
+        questions:
+        while(true)
+        {
+            int option = this.readOption("1. Create a user 2. Delete a user 3. Create a game 4. Quit ", 1, 4);
+            switch(option)
             {
-                int option = this.readOption("1. Create a user 2. Delete a user 3. Create a game 4. Quit ", 1, 4);
-                switch(option)
-                {
-                case 1: this.createUser(); break;
-                case 2: this.deleteUser(); break;
-                case 3: this.createGame(); break;
-                default: break questions;
-                }
+            case 1: this.createUser(); break;
+            case 2: this.deleteUser(); break;
+            case 3: this.createGame(); break;
+            default: break questions;
             }
         }
+    }
     
     public void createUser()
     {
@@ -122,5 +118,3 @@ public class Tui {
         }
     }
 }
-
-   
