@@ -299,7 +299,7 @@ public class Services
             return false;
         }else if(position.x == opponent.x&& position.y == opponent.y)
         {
-            System.out.println(playerName + " ran into the opponent.");
+            System.out.println(playerName + " guided himself into the opponent.");
             return false;
         }else
         {
