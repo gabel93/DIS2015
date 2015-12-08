@@ -91,7 +91,7 @@ public class Server
    //Handlerrequest er oprettet som boolean, hvilket er ensbetydende med; 
    //Der enten godtages en request, hvis den er sand, eller springer videre til næste.
    //De forskellige request er inde under protocol "package" og er simple klasser der kan hente og sende data.
-   //tjekker hvilken request der skal hÃ¥ndteres
+   //Så i bund og grund tjekker denne metode hvilken request der skal håndteres
         private boolean handleRequest(ObjectInputStream inputStream, ObjectOutputStream outputStream) throws Exception
         {
             Object request = inputStream.readObject();
