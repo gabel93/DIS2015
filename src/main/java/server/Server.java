@@ -87,10 +87,11 @@ public class Server
             }
         }
         
-        //de forskellige menupunkter bliver tjekket en for en i login
-        //Handlerrequest er oprettet som boolean, der enten godtager requesten hvis den er sand. eller springer videre til næste
-        //De forskellige request er inde under protocol "package" og er simple klasser der kan hente og sende dato.
-        //tjekker hvilken request der skal hÃ¥ndteres
+// - De forskellige punkter i den færdige client menu bliver tjekket en for en i login.
+// - Handlerrequest funktionen er oprettet som boolean, dette betyder at den enten godtager requesten hvis den er sand,
+// eller springer videre til næste.
+// - De forskellige request er inde under protocol "package" og er simple klasser der kan hente og sende data.
+// - Dette samarbejde tjekker også hvilken request der skal håndteres
         private boolean handleRequest(ObjectInputStream inputStream, ObjectOutputStream outputStream) throws Exception
         {
             Object request = inputStream.readObject();
