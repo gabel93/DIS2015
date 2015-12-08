@@ -89,7 +89,7 @@ public class Server
         
         //de forskellige menupunkter bliver tjekket en for en i login
         //Handlerrequest er oprettet som boolean, der enten godtager requesten hvis den er sand. eller springer videre til næste
-        //De forskellige request er inde under protocol "package" og er simple klasser der kan hente og sende dato.
+        //De forskellige request er inde under protocol "package" og er simple klasser der kan hente og sende data.
         //tjekker hvilken request der skal hÃ¥ndteres
         private boolean handleRequest(ObjectInputStream inputStream, ObjectOutputStream outputStream) throws Exception
         {
