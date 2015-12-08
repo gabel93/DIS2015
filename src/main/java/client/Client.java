@@ -75,7 +75,7 @@ public class Client
                 ;
             }
             
-            // Execute operaions.
+            
             options:
             while(true)
             {
