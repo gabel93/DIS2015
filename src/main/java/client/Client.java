@@ -75,7 +75,7 @@ public class Client
               ;
           }
           
-      // Execute operaions.
+      //Det er kommandoerne der bliver "defineret".
           options:
           while(true)
           {
