@@ -180,7 +180,7 @@ public class Client
       boolean successful = (boolean) this.sendRequest(request);
       System.out.println(successful ? "Commands is now set successfully." : "Your comands is incorrect(failed).");
   }
-//creategame request sendes til serv
+      //En simpel creategame request sendes til serveren.
   private void createGame()
   {
       System.out.print("Game name? ");
