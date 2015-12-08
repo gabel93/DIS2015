@@ -85,15 +85,15 @@ public class Services
     
     public boolean logout(long id)
     {
-      //Den nuværende user som bliver defineret/indikeret af "this", bliver logget ud
+    //Den nuværende user som bliver defineret/indikeret af "this", bliver logget ud
         User user = this.getUser(id);
         if(user == null)
         {
             return false;
         }
-      //Da logout finder sted sættes loginkey regelmæssigt igen til 0 
+    //Da logout finder sted sættes loginkey regelmæssigt igen til 0 
         user.setLoginKey(null);
-      //Her bliver det opdateret i databasen
+    //Her bliver det opdateret i databasen
         sessionTool.update(user);
         return true;
     }
