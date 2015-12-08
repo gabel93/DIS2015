@@ -213,7 +213,7 @@ public class Client
       System.out.println(game.getPlayer1() + " V.S. " + game.getPlayer2());
       System.out.println(game.getLastResult());
   }
-  //deleteGame request sendes til serv
+      //En simpel deleteGame request sendes til serveren.
   private void deleteGame()
   {
       System.out.print("Game name? ");
