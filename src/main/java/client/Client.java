@@ -60,7 +60,7 @@ public class Client
         
         try(Socket socket = new Socket(host, port))
         {
-        	// Etablerer forbindelse og opretter streams
+        //Etablerer forbindelse og opretter streams
             outputStream = new ObjectOutputStream(socket.getOutputStream());
             HelloRequest request = new HelloRequest();
             request.setName("world");
