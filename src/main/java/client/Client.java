@@ -105,6 +105,12 @@ public class Client
     
     private boolean login()
     {
+        System.out.print("Password? [password]: ");
+        String password = scanner.nextLine();
+        if(password.length() == 0)
+        {
+            password = "password";
+        }
         System.out.print("Username? [Admin]: ");
         username = scanner.nextLine();
         if(username.length() == 0)
@@ -112,12 +118,6 @@ public class Client
             username = "Admin";
         }
 
-        System.out.print("Password? [password]: ");
-        String password = scanner.nextLine();
-        if(password.length() == 0)
-        {
-            password = "password";
-        }
        
       //Det er vigtigt at ligge mærke til at det er login request som bliver oprettet her.
         
