@@ -134,14 +134,7 @@ public class Client
         
         return successful;
     }
-      //Logout request -->Server
-    private void logout()
-    {
-        LogoutRequest request = new LogoutRequest();
-        request.setUsername(username);
-        this.sendRequest(request);
-    }
-      //Creategame request -->Server
+  //Creategame request -->Server
     private void createGame()
     {
         System.out.print("Game name? ");
@@ -155,6 +148,14 @@ public class Client
         Game resultGame = (Game) this.sendRequest(request);
         System.out.println(resultGame == null ? "You have failed to create game \"" + name + "\"." :"Game \"" + name + "\" is now created successfully.");
     }
+      //Logout request -->Server
+    private void logout()
+    {
+        LogoutRequest request = new LogoutRequest();
+        request.setUsername(username);
+        this.sendRequest(request);
+    }
+      
       //Setcommands request -->Server
     private void setCommands()
     {
