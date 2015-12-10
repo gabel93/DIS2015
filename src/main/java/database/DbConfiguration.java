@@ -85,7 +85,8 @@ public class DbConfiguration
     @Bean
     public PlatformTransactionManager transactionManager()
     {
-        HibernateTransactionManager transactionManager = new HibernateTransactionManager(this.sessionFactory());
+        HibernateTransactionManager transactionManager = 
+        new HibernateTransactionManager(this.sessionFactory());
         return transactionManager;
     }    
     

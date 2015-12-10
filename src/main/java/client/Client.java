@@ -81,7 +81,7 @@ public class Client
             {
                 try
                 {
-                    int option = this.readOption("1. Create a game 2. Set commands to game 3. Get highscore(s) 4. Delete a game 5. Start a game 6. Show a game 7. Logout : ", 1, 7);
+                    int option = this.readOption("1. Create a game 2. Set game commands 3. Get highscore(s) 4. Delete a game 5. Start a game 6. Show a game 7. Logout : ", 1, 7);
                     switch(option)
                     {
                     case 1: this.createGame(); break;
